@@ -63,6 +63,14 @@ export const getTasksService = async (query: ITaskParams) => {
   let page = 0;
   let pageSize = 10;
   let sort: string | undefined;
+  const whereClause: any = {};
+  if (query.status) {
+    whereClause.status = query.status;
+  }
+
+  if (query.tag) {
+    whereClause.tag = query.tag;
+  }
 
   if (query) {
     const {
@@ -80,7 +88,7 @@ export const getTasksService = async (query: ITaskParams) => {
     : [];
 
   const options: FindOptions = {
-    where: { status: query.status },
+    where: whereClause,
     order: sortOrder,
     offset: pageSize * page,
     limit: pageSize,

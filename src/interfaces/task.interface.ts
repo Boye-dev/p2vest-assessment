@@ -36,4 +36,5 @@ export interface ReassignTask {
 }
 export interface ITaskParams extends IParams {
   status?: keyof typeof TaskStatusEnnum;
+  tag?: keyof typeof TagsEnnum;
 }
