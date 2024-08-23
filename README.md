@@ -21,18 +21,22 @@ https://documenter.getpostman.com/view/17301223/2sAXjDfbGU
     DB_USERNAME=your_database_user_name
     PORT=your_port
     ```
-1. Install dependencies:
+4. Install dependencies:
 
     ```bash
     pnpm install
     ```
 
 
-2. Start the development server:
+5. Start the development server:
 
     ```bash
     pnpm run dev
     ```
 
+6. Run migrations:
 
+    ```bash
+    pnpm migrate
+    ```
 
